@@ -152,7 +152,7 @@ abstract class AbstractKotlinTarget(
 }
 
 internal fun KotlinTarget.disambiguateName(simpleName: String) =
-    lowerCamelCaseName(targetName, simpleName)
+    lowerCamelCaseName(disambiguationClassifier, simpleName)
 
 open class KotlinOnlyTarget<T : KotlinCompilation<*>>(
     project: Project,
